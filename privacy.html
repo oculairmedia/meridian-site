@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy — Meridian</title>
-  <meta name="description" content="Privacy policy for Meridian, a Letta-compatible Android and desktop client.">
+  <title>Privacy Policy — Meridian</title>
+  <meta name="description" content="Privacy policy for Meridian, a Letta-compatible client by Oculair. Chat and memory stay on the Letta server you connect.">
   <meta name="theme-color" content="#07161A">
   <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Meridian">
+  <meta property="og:description" content="A Letta-compatible client — privacy policy.">
+  <meta property="og:image" content="assets/hero.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -17,66 +20,113 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="nav">
+
+  <header class="nav nav-solid">
     <a class="brand" href="./">
       <img src="assets/nav-mark.png" width="36" height="36" alt="">
       Meridian
     </a>
     <nav aria-label="Primary">
       <ul class="nav-links">
-        <li><a href="./#what">What it is</a></li>
         <li><a href="./#get">Get it</a></li>
+        <li><a href="privacy.html" aria-current="page">Privacy</a></li>
         <li><a class="nav-cta btn btn-ghost btn-sm" href="https://github.com/oculairmedia/letta-mobile">GitHub</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main" class="section">
-    <div class="wrap prose">
-      <p class="kicker">Policy</p>
-      <h1>Privacy</h1>
-      <p class="lede">Meridian is a client. It talks to the Letta server you configure. We do not run that server, and we do not sell your data.</p>
-      <p class="meta">Last updated 14 August 2026 · Operator: Oculair (oculairmedia)</p>
+  <main id="main" class="prose">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective 14 August 2026 · Meridian by Oculair</p>
 
-      <h2>Who this covers</h2>
-      <p>This policy is for the Meridian Android and desktop apps published by Oculair. It is not a policy for Letta, Letta Cloud, or any server you point the app at. Those have their own terms.</p>
+    <p>Meridian (“the app”) is a Letta-compatible client for Android and desktop, published by Oculair (GitHub: <a href="https://github.com/oculairmedia">oculairmedia</a>). This policy describes what the app stores, what it sends, and what it does not.</p>
+    <p>Meridian is a client. It is not Letta, and it is not a hosted agent service. You connect it to a Letta server you control or to Letta Cloud. That choice determines where your conversations and memory live.</p>
 
-      <h2>What Meridian stores on your device</h2>
-      <ul>
-        <li>Connection details you enter (server URL, API keys, pairing secrets).</li>
-        <li>Local caches of conversations, agent lists, and similar data fetched from your server, so the app can work offline and feel fast.</li>
-        <li>Device pairing and sync state for multi-client live sync.</li>
-        <li>App preferences (theme, selected agent, and similar settings).</li>
-      </ul>
-      <p>That data stays on the device unless you send it to a server you chose. Uninstalling the app deletes the local store, subject to OS backups you control.</p>
+    <h2>Who this applies to</h2>
+    <p>This policy covers the Meridian Android application and the Compose Desktop client built from the same project, including builds distributed via GitHub Releases, Obtainium, closed Play Store testing, and a future Play Store listing. It does not cover Letta itself, Letta Cloud, or any third-party MCP server, model provider, or tool you attach through your Letta server.</p>
 
-      <h2>What Meridian sends on the network</h2>
-      <p>Meridian sends requests to the Letta endpoint you configure: a self-hosted server, Letta Cloud, or another compatible host. Chat messages, memory, agent configs, tools, and admin actions go there. We do not operate a Meridian backend that receives your chats.</p>
-      <p>The app may also contact GitHub to check for updates if you install from GitHub Releases or Obtainium. That is GitHub’s service, not ours.</p>
+    <h2>The short version</h2>
+    <ul>
+      <li>Chat, agent configuration, and memory stay on the Letta server you connect — your own instance or Letta Cloud.</li>
+      <li>The app keeps local caches, credentials, and device-pairing data on the device so it can reconnect and sync.</li>
+      <li>We do not show ads. We do not sell your data. We do not run a marketing pixel in the app.</li>
+      <li>Optional crash and performance reporting may be included in some builds. Chat contents and credentials are not intended to be part of that reporting.</li>
+    </ul>
 
-      <h2>What we do not collect</h2>
-      <ul>
-        <li>No advertising identifiers, no ads, no trackers.</li>
-        <li>No analytics SDK and no crash-reporting service in the current builds.</li>
-        <li>We do not sell personal information. We do not share it with data brokers.</li>
-      </ul>
+    <h2>Information you provide to your Letta server</h2>
+    <p>When you use Meridian you authenticate to a Letta server (self-hosted or Letta Cloud) and then create, edit, and talk to agents; manage memory; and use admin surfaces (models, providers, tools, MCP servers, identities, folders, groups, schedules, jobs, runs).</p>
+    <p><strong>That content is sent to the server you configured, not to Oculair as a product backend.</strong> We do not operate an Oculair chat or memory cloud that sits in the middle. If you use Letta Cloud, Letta’s own terms and privacy policy apply to data on that service. If you self-host, your own hosting and access controls apply.</p>
+    <p>Meridian needs network access to reach the server you name. It does not require that traffic to pass through Oculair.</p>
 
-      <h2>Accounts and children</h2>
-      <p>Meridian does not create its own user accounts. If you use Letta Cloud or another hosted server, that provider’s account and age rules apply. Meridian is not directed at children under 13.</p>
+    <h2>Information stored on your device</h2>
+    <p>To function, the app stores data in app-private storage on the device (and equivalent local storage on desktop), including:</p>
+    <ul>
+      <li><strong>Connection details and credentials</strong> — server URL and authentication material you enter so the app can sign in again.</li>
+      <li><strong>Local caches</strong> — copies of conversations, agent metadata, memory fragments, and related records fetched from your server, used for offline-tolerant display and performance.</li>
+      <li><strong>Device pairing data</strong> — identifiers and authorization material used for multi-client conversation sync and paired-device authorization between your own clients.</li>
+      <li><strong>Preferences and UI state</strong> — settings you choose in the app.</li>
+      <li><strong>Local crash summary</strong> — if the app crashes, a short record (timestamp, exception type, stack excerpt, optional crash event id) may be written on-device so you can see it on next launch. Dismissing it deletes that local record.</li>
+    </ul>
+    <p>Uninstalling the Android app removes app-private storage. It does not delete data on your Letta server. Clearing desktop app data is under your control on that machine.</p>
 
-      <h2>Your choices</h2>
-      <ul>
-        <li>Use a self-hosted Letta server if you want the data to stay on machines you run.</li>
-        <li>Clear app data or uninstall to wipe the on-device cache and stored credentials.</li>
-        <li>Revoke API keys on the server if a device is lost.</li>
-      </ul>
+    <h2>Crash and performance reporting</h2>
+    <p>Meridian can include optional crash and performance reporting (Sentry). Reporting is initialized only when a project DSN is configured for that build. If no DSN is configured, reporting is not started and nothing is sent to Sentry.</p>
+    <p>When reporting is enabled, a crash or sampled performance trace may include:</p>
+    <ul>
+      <li>stack traces and error messages generated by the app;</li>
+      <li>app version, operating system, and device model;</li>
+      <li>sampled performance traces and session health signals.</li>
+    </ul>
+    <p>This telemetry is used to find and fix defects. It is not used for advertising. Chat messages, memory contents, and server credentials are not intended to be included. Events may be processed on Sentry infrastructure operated by Oculair (including a self-hosted instance).</p>
+    <p>We do not collect product analytics (no advertising identifiers, no usage funnels, no third-party ads SDKs). If that changes, this policy will be updated before it ships in a store listing.</p>
 
-      <h2>Changes</h2>
-      <p>If this policy changes, we will update the date on this page. Material changes will also be noted in the GitHub release notes.</p>
+    <h2>Permissions</h2>
+    <p>The Android app requires network access to talk to the Letta server you configure and, when pairing or live sync is in use, to other clients you authorize. Additional platform permissions, if requested, are for features you invoke (for example attaching files to a conversation). Meridian does not need access to your contacts, call log, or advertising ID to operate as a Letta client.</p>
 
-      <h2>Contact</h2>
-      <p>Questions: open an issue on <a href="https://github.com/oculairmedia/letta-mobile">github.com/oculairmedia/letta-mobile</a> and mention privacy. Operator: Oculair, GitHub org oculairmedia.</p>
-    </div>
+    <h2>How we use information we hold</h2>
+    <p>Oculair uses device-local data only to run the client on your machine. If crash reporting is enabled in a build, we use those reports to maintain stability. We do not use Meridian data to profile you for ads or to sell lists.</p>
+
+    <h2>Sharing</h2>
+    <p>We do not sell personal information. We do not share your chat or memory with advertisers.</p>
+    <p>Data you send through Meridian is delivered to:</p>
+    <ul>
+      <li>the Letta server you configured (including Letta Cloud if you choose it);</li>
+      <li>any model providers, tools, or MCP servers that <em>your</em> Letta server is set up to call — those are chosen in Letta, not by this client;</li>
+      <li>other Meridian clients you have paired, for live sync and agent-to-agent messaging you enable;</li>
+      <li>Sentry, only when crash reporting is enabled in that build, as described above.</li>
+    </ul>
+    <p>We may disclose information if required by law, or to protect the security of users, but the client architecture means Oculair typically does not hold your conversations in the first place.</p>
+
+    <h2>Retention</h2>
+    <p>Server-side retention is governed by your Letta server or Letta Cloud. Local caches and credentials remain until you sign out, clear app data, or uninstall. Local crash summaries remain until dismissed or overwritten. Crash reports that were actually uploaded are retained only as long as needed to debug, then according to our Sentry retention settings.</p>
+
+    <h2>Children</h2>
+    <p>Meridian is not directed at children under 13, and we do not knowingly collect personal information from children. If you believe a child has provided personal information through the app, contact us via GitHub and we will delete any such information we actually hold (typically limited to crash metadata, if any).</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>Use a self-hosted Letta server if you want conversations and memory entirely under your infrastructure.</li>
+      <li>Revoke credentials and unpair devices in the app when you stop using a client.</li>
+      <li>Uninstall or clear app storage to remove local caches and credentials.</li>
+      <li>Delete agent, chat, and memory data on the Letta server you control, using Meridian’s management screens or the server’s own tools.</li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>Credentials and pairing material are stored in app-private storage. Transport to your Letta server uses the HTTPS (or other) endpoint you configure. You are responsible for the security of the server you point Meridian at, including API keys and who can reach it.</p>
+
+    <h2>International users</h2>
+    <p>Oculair is the publisher of the client. Processing of crash reports, when enabled, may occur in the region where our Sentry instance is hosted. Chat and memory are processed wherever you host Letta or where Letta Cloud operates — that is outside this policy’s control.</p>
+
+    <h2>Changes</h2>
+    <p>If we change what the app collects — for example by turning on analytics in a store build — we will update this policy and the effective date. Material changes will be reflected on this page before those builds are offered as the current release.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy, deletion requests for data Oculair actually holds, or privacy reports:</p>
+    <ul>
+      <li>GitHub organization: <a href="https://github.com/oculairmedia">github.com/oculairmedia</a></li>
+      <li>Project issues: <a href="https://github.com/oculairmedia/letta-mobile/issues">github.com/oculairmedia/letta-mobile/issues</a></li>
+    </ul>
+    <p>There is no in-app advertising contact, and no separate marketing list. Do not send credentials or server tokens in a public issue; redact them.</p>
   </main>
 
   <footer class="site-foot">
