@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meridian — a Letta-compatible client</title>
+  <meta name="description" content="A Letta-compatible client for Android and desktop. Manage agents, chat, memory, and admin on the Letta server you already run.">
+  <meta name="theme-color" content="#07161A">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="./">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Meridian">
+  <meta property="og:description" content="A Letta-compatible client for Android and desktop.">
+  <meta property="og:image" content="assets/hero.png">
+  <meta property="og:image:alt" content="Dawn over dark water, a vertical amber line of light at the horizon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meridian">
+  <meta name="twitter:description" content="A Letta-compatible client for Android and desktop.">
+  <meta name="twitter:image" content="assets/hero.png">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/hero.png" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav nav-over">
+    <a class="brand" href="./">
+      <img src="assets/nav-mark.png" width="36" height="36" alt="">
+      Meridian
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li class="hide-sm"><a href="#what">What it is</a></li>
+        <li class="hide-sm"><a href="#features">Features</a></li>
+        <li><a href="#get">Get it</a></li>
+        <li><a class="nav-cta btn btn-ghost btn-sm" href="https://github.com/oculairmedia/letta-mobile">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="assets/hero.png"
+        width="1536"
+        height="1024"
+        alt="Dawn over dark water: a thin vertical amber meridian of light at the horizon."
+        fetchpriority="high"
+      >
+      <div class="hero-inner">
+        <p class="kicker">Where night meets day</p>
+        <h1>Meridian</h1>
+        <p class="lede">A Letta-compatible client.</p>
+        <p class="sub">Android today, desktop from the same repository. Point it at your Letta server — or Letta Cloud — and work with the agents you already have.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/oculairmedia/letta-mobile/releases">Get the Android build</a>
+          <a class="btn btn-ghost" href="https://github.com/oculairmedia/letta-mobile">Source on GitHub</a>
+        </div>
+        <p class="meta">Latest release v0.17.0 · Obtainium already works · Desktop coming via the same repo</p>
+      </div>
+    </section>
+
+    <hr class="dawn" aria-hidden="true">
+
+    <section class="section position" id="what">
+      <div class="wrap">
+        <h2>A client. Not the Letta app.</h2>
+        <p class="intro">Meridian speaks Letta’s protocol. It is not Letta, not a fork, and not a hosted substitute. You bring the server. Chat, memory, and agent state stay there.</p>
+        <ul class="claims">
+          <li>
+            <h3>Your server</h3>
+            <p>Connect your own Letta instance or Letta Cloud. Meridian does not run your agents for you.</p>
+          </li>
+          <li>
+            <h3>One domain module</h3>
+            <p>Kotlin Multiplatform. Android and Compose Desktop share a single domain layer; platform code stays thin.</p>
+          </li>
+          <li>
+            <h3>By Oculair</h3>
+            <p>Built by oculairmedia. The current repository is letta-mobile until the Meridian cutover.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="wrap">
+        <h2>What it does</h2>
+        <p class="intro">The same capabilities on phone and desktop — agent work, memory, and the admin surface Letta already has.</p>
+        <dl class="feat-list">
+          <div class="feat">
+            <dt>Agent management</dt>
+            <dd>Create, edit, clone, import, delete, and organize agents on Android and desktop.</dd>
+          </div>
+          <div class="feat">
+            <dt>Rich chat</dt>
+            <dd>Tool outputs, code blocks, reasoning, mermaid diagrams, and a real-time assistant work timeline.</dd>
+          </div>
+          <div class="feat">
+            <dt>Interactive tools</dt>
+            <dd>AskUserQuestion and ExitPlanMode surface to you, with submit and approve wiring.</dd>
+          </div>
+          <div class="feat">
+            <dt>Memory administration</dt>
+            <dd>Core memory, archival passages, block library, and archive attachment flows.</dd>
+          </div>
+          <div class="feat">
+            <dt>Admin tooling</dt>
+            <dd>Models, providers, tools, MCP servers, identities, folders, groups, schedules, jobs, and runs.</dd>
+          </div>
+          <div class="feat">
+            <dt>Live sync</dt>
+            <dd>Multi-client conversation sync, paired-device authorization, and agent-to-agent messaging.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section get" id="get">
+      <div class="wrap">
+        <h2>Get Meridian</h2>
+        <p class="intro">Signed Android builds ship on GitHub Releases. Install by hand, or let Obtainium watch the repo.</p>
+        <div class="panels">
+          <div class="panel">
+            <h3>Android</h3>
+            <p>v0.17.0 is current. Download the APK from Releases, or add the repository in Obtainium for updates.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://github.com/oculairmedia/letta-mobile/releases">GitHub Releases</a>
+              <a class="btn btn-ghost" href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/oculairmedia/letta-mobile/releases">Add in Obtainium</a>
+            </div>
+            <p class="note">Sideload from GitHub until Play listing is live. Verify the publisher: oculairmedia.</p>
+            <div class="play">
+              <h4>Play Store</h4>
+              <p>Closed testing soon. Meridian is not listed on Google Play yet. When it is, this page will say so.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Desktop</h3>
+            <p>Compose Desktop is part of the same Kotlin Multiplatform project. Builds are coming via the same repository — not a separate product.</p>
+            <p class="note">Watch <a href="https://github.com/oculairmedia/letta-mobile">github.com/oculairmedia/letta-mobile</a> for desktop artifacts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>© 2026 Oculair</p>
+    <p class="foot-links">
+      <a href="https://github.com/oculairmedia/letta-mobile">GitHub</a>
+      <a href="privacy.html">Privacy</a>
+    </p>
+  </footer>
+</body>
+</html>
