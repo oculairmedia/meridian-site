@@ -80,8 +80,21 @@
     <p>This telemetry is used to find and fix defects. It is not used for advertising. Chat messages, memory contents, and server credentials are not intended to be included. Events may be processed on Sentry infrastructure operated by Oculair (including a self-hosted instance).</p>
     <p>We do not collect product analytics (no advertising identifiers, no usage funnels, no third-party ads SDKs). If that changes, this policy will be updated before it ships in a store listing.</p>
 
-    <h2>Permissions</h2>
-    <p>The Android app requires network access to talk to the Letta server you configure and, when pairing or live sync is in use, to other clients you authorize. Additional platform permissions, if requested, are for features you invoke (for example attaching files to a conversation). Meridian does not need access to your contacts, call log, or advertising ID to operate as a Letta client.</p>
+    <h2>Network and transport</h2>
+    <p>You choose the destination. Typical endpoints are an <code>https://</code> Letta server, Letta Cloud, or an <code>iroh://</code> peer for paired-device sync. The app’s Android network config currently <strong>permits cleartext HTTP</strong> as well as TLS. Do not assume every off-device path is encrypted. iroh transport is used for live sync between clients you authorize; treat it as a separate path from HTTPS to your Letta server.</p>
+    <p>Oculair does not claim “encryption in transit” for Play Data safety while cleartext remains allowed and iroh encryption is not independently documented here.</p>
+
+    <h2>Permissions and background work</h2>
+    <p>The Play binary may request, and use when you invoke the matching feature:</p>
+    <ul>
+      <li><strong>Microphone</strong> — on-device speech input, only when you use that feature.</li>
+      <li><strong>Camera</strong> — optional, currently for QR pairing / scan flows. The camera is not required to install the app.</li>
+      <li><strong>Contacts and calendar</strong> — declared on Android so agents or tools you run can use them when you grant access. The core Letta-client loop does not require them.</li>
+      <li><strong>Notifications and a notification listener</strong> — to surface assistant work and, where enabled, read notification context you allow.</li>
+      <li><strong>Foreground service (remote messaging)</strong> — keeps chat push and the local embedded runtime alive while a session is active.</li>
+      <li><strong>Network and boot-completed</strong> — to reach your server and resume after reboot if you have background sync enabled.</li>
+    </ul>
+    <p>Android backup (<code>allowBackup</code>) is currently on, so OS backups may include app-private data on that device. We do not need your advertising ID. Call log is not requested.</p>
 
     <h2>How we use information we hold</h2>
     <p>Oculair uses device-local data only to run the client on your machine. If crash reporting is enabled in a build, we use those reports to maintain stability. We do not use Meridian data to profile you for ads or to sell lists.</p>
@@ -92,7 +105,7 @@
     <ul>
       <li>the Letta server you configured (including Letta Cloud if you choose it);</li>
       <li>any model providers, tools, or MCP servers that <em>your</em> Letta server is set up to call — those are chosen in Letta, not by this client;</li>
-      <li>other Meridian clients you have paired, for live sync and agent-to-agent messaging you enable;</li>
+      <li>other Meridian clients you have paired (including over <code>iroh://</code>), for live sync and agent-to-agent messaging you enable;</li>
       <li>Sentry, only when crash reporting is enabled in that build, as described above.</li>
     </ul>
     <p>We may disclose information if required by law, or to protect the security of users, but the client architecture means Oculair typically does not hold your conversations in the first place.</p>
@@ -112,7 +125,7 @@
     </ul>
 
     <h2>Security</h2>
-    <p>Credentials and pairing material are stored in app-private storage. Transport to your Letta server uses the HTTPS (or other) endpoint you configure. You are responsible for the security of the server you point Meridian at, including API keys and who can reach it.</p>
+    <p>Credentials and pairing material are stored in app-private storage. Prefer an <code>https://</code> Letta URL. Cleartext HTTP is technically allowed by the current Android network config; use it only on networks you trust. You are responsible for the server you point Meridian at, including API keys and who can reach it.</p>
 
     <h2>International users</h2>
     <p>Oculair is the publisher of the client. Processing of crash reports, when enabled, may occur in the region where our Sentry instance is hosted. Chat and memory are processed wherever you host Letta or where Letta Cloud operates — that is outside this policy’s control.</p>
